@@ -8,26 +8,26 @@ codenotary: baris@ozdag.net
 startup: application
 init: false
 arch:
-- armv7
-- armhf
-- amd64
-- aarch64
-- i386
+  - armv7
+  - armhf
+  - amd64
+  - aarch64
+  - i386
 boot: auto
 host_network: true
 map:
-- addon_config:rw
+  - addon_config:rw
 options:
-  hostname: ''
-  ssh_port: '22'
+  hostname: ""
+  ssh_port: "22"
   username: autossh
   remote_forwarding:
     - 127.0.0.1:8123:172.17.0.1:8123
   local_forwarding:
-    - ''
+    - ""
   other_ssh_options: "-v"
-  monitor_port: '0'
-  gatetime: '30'
+  monitor_port: "0"
+  gatetime: "30"
 schema:
   hostname: str
   ssh_port: int
