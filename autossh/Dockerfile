@@ -10,7 +10,13 @@ ARG BUILD_ARCH=aarch64
 
 ENV LANG C.UTF-8
 
-RUN apk add --no-cache tzdata jq openssh vim curl autossh
+RUN apk add --no-cache \
+  tzdata=2023d-r0 \
+  jq=1.7.1-r0 \
+  openssh=9.6_p1-r0 \
+  vim=9.0.2127-r0 \
+  curl=8.5.0-r0 \
+  autossh=1.4g-r3
 
 # Copy root filesystem
 COPY rootfs /
