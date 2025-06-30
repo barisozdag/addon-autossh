@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base/aarch64:17.2.2
+ARG BUILD_FROM=ghcr.io/hassio-addons/base/aarch64:18.0.0
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
@@ -12,10 +12,10 @@ ENV LANG C.UTF-8
 
 RUN apk add --no-cache \
   tzdata=2025b-r0 \
-  jq=1.7.1-r0 \
-  openssh=9.9_p2-r0 \
-  vim=9.1.1105-r0 \
-  curl=8.12.1-r1 \
+  jq=1.8.0-r0 \
+  openssh=10.0_p1-r7 \
+  vim=9.1.1415-r0 \
+  curl=8.14.1-r1 \
   autossh=1.4g-r3
 
 # Copy root filesystem
